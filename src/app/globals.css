@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 26, 20, 16;
+  --background-end-rgb: 26, 20, 16;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #1A1410;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium selection styling */
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+  color: #F5E6D3;
+}
+
+/* Hide scrollbar for clean aesthetic */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Premium text glow effect */
+.text-glow {
+  text-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+}
+
+/* Cinematic vignette overlay */
+.vignette::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: 5;
+}
