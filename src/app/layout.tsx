@@ -21,9 +21,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <SmoothScroll>
-                <body className={outfit.className}>{children}</body>
-            </SmoothScroll>
+            <body className={outfit.className}>
+                <SmoothScroll>
+                    {children}
+                </SmoothScroll>
+            </body>
         </html>
     );
 }
